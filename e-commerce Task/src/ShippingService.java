@@ -1,10 +1,10 @@
 import java.util.List;
 public class ShippingService {
-    public static void ship(List<Cart.ShippableInfo> items) {
+    public static void ship(List<ShippableInfo> items) {
         System.out.println("\n **** Shipment notice ****\n");
         double totalWeightKg = 0;
 
-        for (Cart.ShippableInfo item: items) {
+        for (ShippableInfo item: items) {
             Shippable p = item.Product;
             int qty = item.quantity;
             double itemWeightKg = p.getWeight() * qty;
